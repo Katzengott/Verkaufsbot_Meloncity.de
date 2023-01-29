@@ -84,8 +84,8 @@ function saveroom() {
 }
 
 function checkMoney(buyer, cash) {
-    console.log("http://:2515/get/" + token + "/" + cash)
-    http.get("http://:2515/get/" + token + "/" + cash, res => {
+    console.log(`http://45.81.235.56:2515/get/${token}/` + cash)
+    http.get(`http://45.81.235.56:2515/get/${token}/` + cash, res => {
 
         let rawData = ''
 
@@ -160,7 +160,7 @@ async function takeItemsfromChest(parsed, buyer, cash) {
         bot.chat("/pay " + buyer + " " + cash)
         pay = true
 
-        fetch('http://:2515/post/change', {
+        fetch('http://45.81.235.56:2515/post/change', {
                 method: 'PATCH',
                 headers: {
                     'Accept': 'application/json',
